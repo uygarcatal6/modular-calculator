@@ -1,0 +1,53 @@
+[33mcommit 260ee9417acc0e5069aedde56b7f1f54bbbf4054[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Merge: ae30957 be15135
+Author: Uygar <uygar.catal@studio.unibo.it>
+Date:   Thu Mar 19 12:39:32 2026 +0100
+
+    Merge branch 'master' of https://github.com/uygarcatal6/modular-calculator
+
+[1mdiff --cc README.md[m
+[1mindex e04fa5a,7bec541..de2f668[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@@ -39,31 -27,22 +39,21 @@@[m [mThe project follows a modular design pa[m
+  python -m calculator.ui.gui[m
+  ```[m
+  [m
+[31m -### Running the calculator as a command-line tool[m
+[32m +This launches an interactive desktop calculator with a button grid interface.[m
+  [m
+[31m -Open a shell in this directory, and run the following command:[m
+[32m +### CLI (Command-Line Mode)[m
+  [m
+  ```bash[m
+[31m- python -m calculator.ui.cli "2+3*4"[m
+[31m- python -m calculator.ui.cli "10/2-1"[m
+[31m- python -m calculator.ui.cli "5.5*2.2"[m
+[32m+ python -m calculator.ui.cli EXPRESSION[m
+  ```[m
+  [m
+[31m- Expressions are evaluated following standard mathematical order of operations.[m
+[32m+ where `EXPRESSION` is a mathematical expression to be evaluated.[m
+  [m
+[31m- ## Project Structure[m
+  [m
+[31m- ```[m
+[31m- modular-calculator/[m
+[31m- ├── README.md[m
+[31m- ├── requirements.txt[m
+[31m- ├── calculator/[m
+[31m- │   ├── __init__.py          # Calculator core class[m
+[31m- │   └── ui/[m
+[31m- │       ├── cli.py           # Command-line interface[m
+[31m- │       └── gui.py           # Graphical interface[m
+[31m- ```[m
+[32m+ ## How to restore dependencies[m
+  [m
+[31m- ## LALLAHISGREAT ✨[m
+[32m+ Open a shell in this directory, and run the following command:[m
+  [m
+[31m- This project demonstrates excellent code organization and modular design principles.[m
+[32m+ ```bash[m
+[32m+ pip install -r requirements.txt[m
+[32m+ ```[m
+[31m -Andrea has been here twice[m
