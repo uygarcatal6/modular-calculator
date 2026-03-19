@@ -4,7 +4,7 @@ Number = int | float
 class Calculator:
 
     def __init__(self):
-        self.expression = ""
+        self.reset()
 
     def _ensure_is_digit(self, value: int | str):
         if isinstance(value, str):
@@ -12,6 +12,9 @@ class Calculator:
         if value not in range(10):
             raise ValueError("Value must a digit in [0, 9]: " + value)
         return value
+    
+    def reset(self):
+        self.expression = ""
 
     def _append(self, value):
         self.expression += str(value)
