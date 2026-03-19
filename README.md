@@ -44,26 +44,16 @@ This launches an interactive desktop calculator with a button grid interface.
 ### CLI (Command-Line Mode)
 
 ```bash
-python -m calculator.ui.cli "2+3*4"
-python -m calculator.ui.cli "10/2-1"
-python -m calculator.ui.cli "5.5*2.2"
+python -m calculator.ui.cli EXPRESSION
 ```
 
-Expressions are evaluated following standard mathematical order of operations.
+where `EXPRESSION` is a mathematical expression to be evaluated.
 
-## Project Structure
 
+## How to restore dependencies
+
+Open a shell in this directory, and run the following command:
+
+```bash
+pip install -r requirements.txt
 ```
-modular-calculator/
-├── README.md
-├── requirements.txt
-├── calculator/
-│   ├── __init__.py          # Calculator core class
-│   └── ui/
-│       ├── cli.py           # Command-line interface
-│       └── gui.py           # Graphical interface
-```
-
-## LALLAHISGREAT ✨
-
-This project demonstrates excellent code organization and modular design principles.
