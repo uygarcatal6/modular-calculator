@@ -21,7 +21,17 @@ class Calculator:
     def digit(self, value: int | str):
         value = self._ensure_is_digit(value)
         self._append(value)
+
+    def open_parenthesis(self):
+        self._append("(")
+
+    def close_parenthesis(self):
+        self._append(")")
+
+    def cos(self):
+        self._append("cos")
     
+<<<<<<< HEAD
     def open_parenthesis(self):
         self._append("(")
 
@@ -34,6 +44,11 @@ class Calculator:
     def cos(self):
         self._append("cos(")
     
+=======
+    def sin(self):
+        self._append("sin")
+
+>>>>>>> 92e83b32aa8e1798a0526b133e14f12bfe7e326d
     def plus(self):
         self._append("+")
 
@@ -54,7 +69,12 @@ class Calculator:
     
     def compute_result(self) -> Number:
         try:
+<<<<<<< HEAD
             result = eval(self.expression, {"sin": math.sin, "cos": math.cos})
+=======
+            import math
+            result = eval(self.expression, math.__dict__)
+>>>>>>> 92e83b32aa8e1798a0526b133e14f12bfe7e326d
             if isinstance(result, Number):
                 self.expression = str(result)
                 return result
