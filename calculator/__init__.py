@@ -1,3 +1,5 @@
+import math
+
 Number = int | float
 
 
@@ -20,6 +22,18 @@ class Calculator:
         value = self._ensure_is_digit(value)
         self._append(value)
     
+    def open_parenthesis(self):
+        self._append("(")
+
+    def close_parenthesis(self):
+        self._append(")")
+    
+    def sin(self):
+        self._append("sin(")
+    
+    def cos(self):
+        self._append("cos(")
+    
     def plus(self):
         self._append("+")
 
@@ -40,7 +54,7 @@ class Calculator:
     
     def compute_result(self) -> Number:
         try:
-            result = eval(self.expression)
+            result = eval(self.expression, {"sin": math.sin, "cos": math.cos})
             if isinstance(result, Number):
                 self.expression = str(result)
                 return result
