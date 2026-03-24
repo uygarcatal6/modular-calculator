@@ -1,35 +1,47 @@
-# Calculator
+# Calculator - Modular Design
 
-A simple calculator toolkit written in Python, with several UIs.
+A modern, modular calculator toolkit written in Python with clean separation of business logic and user interfaces.
 
-## Remarks
+## Features
 
-UI code is clearly separated from the business logic.
-Actually, two sorts of UIs are provided: a command-line interface (CLI) and a graphical user interface (GUI),
-based on [Kivy](https://kivy.org/).
+- 🖥️ **Graphical User Interface (GUI)** - Built with Kivy for desktop
+- 💻 **Command-Line Interface (CLI)** - For terminal-based operations
+- ➕ Full arithmetic operations (addition, subtraction, multiplication, division)
+- 🎯 Clean, modular architecture - UI completely separated from core logic
+- 🧮 Supports floating-point arithmetic with decimal points
+
+## Architecture
+
+The project follows a modular design pattern:
+- **`calculator/`** - Core business logic
+- **`calculator/ui/`** - User interface implementations
+  - `cli.py` - Command-line interface
+  - `gui.py` - Graphical interface using Kivy
 
 ## Requirements
 
 - Python >= 3.8
 - Kivy 2.3.1
 
-## How to run the calculator
+## Installation
 
-The software can be run as either a __desktop app__ or a __command-line__ tool.
+1. Clone or download this repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-> Recall restoring the dependencies before running the app for the first time.
+## Usage
 
-### Running the calculator as a desktop app
-
-Open a shell in this directory, and run the following command:
+### GUI (Graphical Mode)
 
 ```bash
 python -m calculator.ui.gui
 ```
 
-### Running the calculator as a command-line tool
+This launches an interactive desktop calculator with a button grid interface.
 
-Open a shell in this directory, and run the following command:
+### CLI (Command-Line Mode)
 
 ```bash
 python -m calculator.ui.cli EXPRESSION

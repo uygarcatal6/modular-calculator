@@ -6,7 +6,7 @@ Number = int | float
 class Calculator:
 
     def __init__(self):
-        self.expression = ""
+        self.reset()
 
     def _ensure_is_digit(self, value: int | str):
         if isinstance(value, str):
@@ -14,6 +14,9 @@ class Calculator:
         if value not in range(10):
             raise ValueError("Value must a digit in [0, 9]: " + value)
         return value
+    
+    def reset(self):
+        self.expression = ""
 
     def _append(self, value):
         self.expression += str(value)
@@ -28,27 +31,12 @@ class Calculator:
     def close_parenthesis(self):
         self._append(")")
 
-    def cos(self):
-        self._append("cos")
-    
-<<<<<<< HEAD
-    def open_parenthesis(self):
-        self._append("(")
-
-    def close_parenthesis(self):
-        self._append(")")
-    
     def sin(self):
         self._append("sin(")
     
     def cos(self):
         self._append("cos(")
     
-=======
-    def sin(self):
-        self._append("sin")
-
->>>>>>> 92e83b32aa8e1798a0526b133e14f12bfe7e326d
     def plus(self):
         self._append("+")
 
@@ -69,12 +57,7 @@ class Calculator:
     
     def compute_result(self) -> Number:
         try:
-<<<<<<< HEAD
             result = eval(self.expression, {"sin": math.sin, "cos": math.cos})
-=======
-            import math
-            result = eval(self.expression, math.__dict__)
->>>>>>> 92e83b32aa8e1798a0526b133e14f12bfe7e326d
             if isinstance(result, Number):
                 self.expression = str(result)
                 return result
